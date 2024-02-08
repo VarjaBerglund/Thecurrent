@@ -1,0 +1,158 @@
+
+/**
+@media screen and (max-width: 400px) { 
+ 
+    #menuicon { 
+ 
+        background-image: url(../img/menuicon.png); 
+ 
+        width: 24px; 
+        height: 24px; 
+ 
+        display: inline-block; 
+ 
+        cursor: pointer; 
+    } 
+    nav ul{
+        flex-direction: column;
+    }
+}
+rgb(186, 196, 198)
+**/
+
+
+
+body {
+    color: white;
+    background-color:#001b3a;
+    margin: 0;
+    padding: 0;
+   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.container {
+    display: grid;
+    grid-template-areas: 
+   "nav nav nav"
+    "header header header"
+    ". main ."
+    "footer footer footer";
+    grid-template-rows: 80px 220px auto 50px;
+    grid-template-columns: auto 800px auto;
+
+}
+#ruta {
+    border-radius: 50px; 
+    box-shadow: 1px -1px 15px 3px #c0c1c5 inset; 
+    text-align: center;
+    display: flex;
+    flex-direction:column;
+    float:right;
+    line-height: 8px;
+    padding: 25px;
+    color: #c0c1c5;
+}
+
+.thispage
+{
+    font-weight: bold;
+}
+nav
+{
+    grid-area: nav;
+    background-color: #00316e;
+    text-align: center;
+    position:fixed;
+    width: 100%;
+   
+}
+ul
+{
+    list-style: none;
+}
+
+
+nav a
+{
+    text-decoration: none;
+    margin-bottom: 20px;
+    color: white;
+    width: 130px;
+    padding: 5px;
+    display: inline-block;
+}
+
+
+nav li {
+    display: inline;
+}
+
+
+a:hover{
+    color: #c0c1c5;
+}
+a{
+    color:#5679a1;
+}
+header {
+    grid-area: header;
+    font-size: 40px;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #c0c1c5;
+}
+
+main {
+    grid-area: main;
+
+}
+
+.sne
+{
+    text-align:end;
+}
+.rak
+{
+    text-align:justify;
+}
+
+.tabell {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 0px;
+    padding: 5px;
+    margin-bottom: 60px;
+}
+
+.line
+{
+    border-bottom: 1px solid #ffff;
+}
+
+.anmala
+{
+    border: 1px solid white;
+    padding-bottom: 50px;
+    font-size: larger;
+    margin-top: -15px;
+}
+
+#knapp {
+    border: 5px solid white;
+    text-align: center;
+    text-decoration: none;
+    background-color: white;
+    box-shadow: 1px 1px 15px 2px #c0c1c5;
+    border-radius: 20px;
+    font-weight: 600;
+    padding: 3px;
+}
+
+footer {
+    grid-area: footer;
+    text-align: center;
+    border-top: 1px solid white; 
+    padding: 20px;
+    margin-top: 20px;
+}
+
