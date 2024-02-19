@@ -28,7 +28,6 @@ body {
     margin: 0;
     padding: 0;
    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
 }
 .container {
     display: grid;
@@ -37,9 +36,48 @@ body {
     "header header header"
     ". main ."
     "footer footer footer";
-    grid-template-rows: 80px 220px auto 50px;
+    grid-template-rows: 80px 220px auto 90px;
     grid-template-columns: auto 800px auto;
 
+}
+.container2 {
+    color: #c0c1c5;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .lili {
+    display: inline-block;
+    font-size: 1.5em;
+    list-style-type: none;
+    padding: 1em;
+    text-transform: uppercase;
+  }
+  
+  li span {
+    display: block;
+    font-size: 4.5rem;
+  }
+  
+  @media all and (max-width: 750px) {
+    .headline {
+      font-size: calc(1.5rem * var(--smaller));
+    }
+    
+    .lili {
+      font-size: calc(1.125rem * var(--smaller));
+    }
+    
+    li span {
+      font-size: calc(3.375rem * var(--smaller));
+    }
+    #headline {
+        font-size:20px;
+    }
+  }
+
+img {
+    float: left;
 }
 #ruta {
     border-radius: 50px; 
@@ -115,10 +153,33 @@ main {
 {
     text-align:justify;
 }
+#amy{
+    float: right;
+}
+.text{
+    margin-left: 220px;
+    text-indent: 30px;
 
+}
+.undertext {
+    margin-bottom: 150px;
+    margin-left: 220px;
+    text-indent: 30px;
+}
+
+
+.undertexthoger {
+    margin-bottom: 150px;
+    margin-right: 220px;
+    text-indent: 30px;
+}
+.texthoger{
+    margin-right: 220px;
+    text-indent: 30px;
+}
 .tabell {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto auto auto auto;
     grid-gap: 0px;
     padding: 5px;
     margin-bottom: 60px;
@@ -127,6 +188,19 @@ main {
 .line
 {
     border-bottom: 1px solid #ffff;
+    text-align: center;
+}
+.kop{
+    border: 21px solid white;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 1px 1px 1px px #c0c1c5;
+    border-radius: 20px;
+    font-weight: 600;
+    padding: 10px; 
+    border-width: 1px 1px 1px 1px;
+    margin-bottom: 10px;
+
 }
 
 .anmala
