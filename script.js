@@ -19,7 +19,7 @@
   
           // Gör något när datumet är nått
           if (distance < 0) {
-            document.getElementById("headline").innerText = "Filmen är här!";
+            document.getElementById("headline").innerText = "THE CURRENT UTE NU!";
             document.getElementById("countdown").style.display = "none";
             clearInterval(x);
           }
