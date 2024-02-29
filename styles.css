@@ -40,6 +40,7 @@ nav {
     position: fixed; /*gör så att nav stannar även om man skrollar ner men är också alltid fast där */
     text-shadow: 2px 1px 2px black;/* gillar lite mystisk känsla med shadow */
     width: 100%; /* nav är över hela skärmen så den lätt ska synas och hittas */
+    margin-left: -40px; /* lägger nav längst ut i kanten */
 }
 ul {
     list-style: none; /* tar bort nav listans prickar */
@@ -53,7 +54,7 @@ nav a {
 
 nav li {
     display: inline; /* gör nav ett inline element */
-    margin-right: 50px; /* särar på de så de inte är så lätt att trycka på fel knapp */
+    padding: 20px;
 }
 
 a:hover{
@@ -214,7 +215,8 @@ footer {
         grid-template-columns: auto; /* gör så den här kan ändras från 1000px till auto */
     }
     nav li {
-        margin-right: 0px; /* minskar avståndet meelan nav så de kan fortsätta vara på rad */
+        margin-right: -15px; /* minskar avståndet mellan li så de kan fortsätta vara på rad */
+        font-size: small;
     }
     header /* ändrar storleken på rubriken så den inte tar upp så mycket plats av skärmen */{
         font-size: 30px;
