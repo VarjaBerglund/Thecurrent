@@ -130,6 +130,7 @@ ol li {
 iframe { /* anpassar trailern till större storlek så den syns bättre */
     width: 560px;
     height: 315px;
+    border: none; /* detta sa ai att jag skulle göra när jag kopiera fel meddelande vid validering */
 }
 /* nästa sida */
 .rollista 
@@ -236,7 +237,4 @@ footer {
           font-size: 0.6em;
         }
     
-        #headline { /* där det kommer stå att det är premiär när nedräkningen är slut */
-            font-size: 20px;
-        }
   }
