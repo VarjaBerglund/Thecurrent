@@ -17,9 +17,8 @@
             document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
             document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
   
-          // Gör något när datumet är nått
+          // Gör något när datumet är nått, den försvinner
           if (distance < 0) {
-            document.getElementById("headline").innerText = "THE CURRENT UTE NU!";
             document.getElementById("countdown").style.display = "none";
             clearInterval(x);
           }

@@ -1,238 +1,242 @@
 
-/**
-@media screen and (max-width: 400px) { 
- 
-    nav ul{
-        flex-direction: column;
-    }
-}
-**/
-
-
-
 body {
     color: white;
-    background: #191a19;;
+    background-color: #191a19;
     margin: 0;
     padding: 0;
-   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-family: Arial, Helvetica, sans-serif;
+   line-height: 25px; /* sätter standard för radavstånd */
+}
+
+header {
+    grid-area: header;
+    font-size: 50px;
+    text-align: center;/* vill ha headern stor och centrerad så den syns tydligt */
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: #8da3b0 2px 2px 2px;
+    margin-top: 30px;
+}
+main {
+    grid-area: main;
 }
 h2 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight:bold;
+    font-weight:bold; /* vi har underrubriker i bold då de är vår grafiska profil då de syns bättre då och skiljer sig från texten */
 }
 .container {
-    display: grid;
+    display: grid; /* gör en grid som bas för hela hemsidan i en container */
     grid-template-areas: 
    "nav nav nav"
     "header header header"
-    ". main ."
+    ". main ." /* gör punkt så att det är tomt på sidan och får centrerad och anpassningsbar design */
     "footer footer footer";
-    grid-template-rows: 80px 300px auto 90px;
-    grid-template-columns: auto 800px auto;
+    grid-template-rows: 50px 200px auto 170px;/* gör main autoså den anpasssar sig efter innehåll */
+    grid-template-columns: auto 1000px auto; /* sätter punkterna till auto så de anpassar sig efter skärmens storlek men har main som en bestämd så designen ser likadan ut*/
 
 }
-.container2 {
-    color: #6c1511  ;
-    margin: 0 auto;
-    text-align: center;
-    padding-top: 100px;
-    padding-bottom: 150px;
-    background-color: #000000;
-  }
-  
-  .lili {
-    display: inline-block;
-    font-size: 1.5em;
-    list-style-type: none;
-    padding: 1em;
-    text-transform: uppercase;
-  }
-  
-  li span {
-    display: block;
-    font-size: 4.5rem;
-  }
-  
-  @media all and (max-width: 750px) {
-    .headline {
-      font-size: calc(1.5rem * var(--smaller));
-    }
-    
-    .lili {
-      font-size: calc(1.125rem * var(--smaller));
-    }
-    
-    li span {
-      font-size: calc(3.375rem * var(--smaller));
-    }
-    #headline {
-        font-size:20px;
-    }
-  }
-
-img {
-    float: left;
-}
-#poster {
-    margin-top: -100px;
-}
-#thecurrent{
-    margin:auto;
-}
-#ruta {
-    border-radius: 50px; 
-    box-shadow: 1px -1px 15px 3px #8da3b0 inset; 
-    text-align: center;
-    display:flex;
-    flex-direction:column;
-    line-height: 8px;
-    padding: 25px;
-    color: #8da3b0 ;
-    float: left;
-    width: 250px;
-    margin-top: -310PX;
-    margin-left: 50PX;
-}
-.starttext{
+nav {
+    grid-area: nav; /* namnger till grid */
     background-color: #3f5968;
-    padding: 40px;
-    margin-left: 450PX;
+    font-weight: bold;/* gör den mer tydlig för besökaren */
+    position: fixed; /*gör så att nav stannar även om man skrollar ner men är också alltid fast där */
+    text-shadow: 2px 1px 2px black;/* gillar lite mystisk känsla med shadow */
+    width: 100%; /* nav är över hela skärmen så den lätt ska synas och hittas */
+}
+ul {
+    list-style: none; /* tar bort nav listans prickar */
+}
+
+nav a {
+    text-decoration: none; /* tar bort understrykningen på länken */
+    color: white;
+    padding: 20px; /* gör den lite större för att lättare trycka på knappen */
+}
+
+nav li {
+    display: inline; /* gör nav ett inline element */
+    margin-right: 50px; /* särar på de så de inte är så lätt att trycka på fel knapp */
+}
+
+a:hover{
+    color: #8da3b0  ; /* gör så när musen är över en länk får den en annan färg vilket gör det tydligare att det är en länk för besökaren */
+}
+a {
+    color:#3f5968; /*  alla länkar får en annan färg så de sticker ut */
 }
 .thispage
 {
-    font-weight: bold;
+    background-color: #8da3b0; /* gör så att hemsidan du är inne på har en annan färg */
 }
-nav
-{
-    grid-area: nav;
-    background-color: #3f5968 ;
+
+#countdown /* nedräkningen */ {
+    color: #8da3b0;
     text-align: center;
-    position:fixed;
-    width: 100%;
-   
-}
-ul
-{
-    list-style: none;
-}
-
-
-nav a
-{
-    text-decoration: none;
-    margin-bottom: 20px;
-    color: white;
-    width: 130px;
-    padding: 5px;
-    display: inline-block;
-}
-
-
-nav li {
-    display: inline;
-}
-
-
-a:hover{
-    color: #8da3b0  ;
-}
-a {
-    color:#3f5968   ;
-}
-header {
-    grid-area: header;
-    font-size: 60px;
-    text-align: center;
+    float: right; /*  gör så att nederäkningen kan vara bredvid bilden */
+    margin-right: 50px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: white;
-}
+    font-size: 1.5em;
+    text-shadow: black 3px 3px 5px; /* första åt sidan, ner och sista är runt hela, kan skriva minus för o byta upp och ner*/
 
-main {
-    grid-area: main;
+  }
+  .lili /* för exakt li i nedräkningen */ {
+    display: inline-block; /* för att få de på rad efter varann */
+    font-size: 0.7em;
+    list-style-type: none; /* tar bort punkt */
+    padding: 1.5em;
+    text-transform: uppercase; /* stora bokstäver */
+  }
+  
+  li span /* ändrar i nedräkningen */{
+    display: block; /* ändrar så timmar min osv hamnar under siffrorna */
+    font-size: 2em;
+  }
 
+#poster {
+    float: left; /* gör så att den ligger bredvid texten */
+    width: 400px;
 }
-
-.sne
-{
-    text-align:end;
+ol /* det ligger en ol lista på första sidan i texten under rubriken*/{
+    list-style: none; /* tar bort siffrorna */
+    display: flex;
+    flex-direction: row; /* gör så att listan listas på rad och behöver göra display flex för att kunna det*/
+    text-align: center;
+    color: black;
+    font-size: smaller; /* ändrar färg och storlek då detta är en snabb fakta om filmen */
 }
-.rak
-{
-    text-align:justify;
-    background-color: #22363c  ;
+ol li {
+    margin-right: 15px; /* tar isär li  */
+}
+.starttext { /* gör en ruta för texten som syns på första sidan */
+    background-color: #3f5968;
     padding: 40px;
+    margin-left: 450PX; /* så bilden är ensam */
+    margin-top: 150px; /* så nedräkning får plats över */
+    box-shadow: 1px -1px 15px 3px #8da3b0 inset; /* inåt shadow */
 }
-#amy{
-    float: right;
+.recension { 
+    margin-top: -180px; /* så texten hamnar under poster men innan rutan är slut annars är det ett hål där */
+    font-style: italic;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: larger; /* så de blir lättare att läsa */
 }
-.text{
-    margin-left: 220px;
-    text-indent: 30px;
+.trailer { /* gör en div och dispaly flex så den kan var i mitten */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* mitten pch drar till sig uppmärksamhet med anna förg påbakgrund */
+    margin-top: 150px;
+    background-color: #8da3b0;
+    padding-bottom: 60px;
+    box-shadow: 1px -1px 15px 3px black inset; /* mystisk känsla */
+}
+iframe { /* anpassar trailern till större storlek så den syns bättre */
+    width: 560px;
+    height: 315px;
+}
+/* nästa sida */
+.rollista 
+{
+    display: grid;/* gör en tabell för att skriva i olika kolumner */
+    grid-template-columns: auto auto auto;
+    text-align:left;
+    border-style: solid;
+    border-color: white;
+    border-radius: 40px; /* lite mjukare känsla med mjuka former */
+    padding: 30px;
+    grid-gap: 15px; /* särar på griden lite */
+    box-shadow: 1px -1px 10px 1px; /* första är sidan, andra är upp eller ner, genomskinlighet ish och sista hur stort runt går shadow*/
+}
 
-}
-.undertext {
-    margin-bottom: 150px;
-    margin-left: 220px;
-    text-indent: 30px;
-}
-
-
-.undertexthoger {
-    margin-bottom: 150px;
-    margin-right: 220px;
-    text-indent: 30px;
-}
-.texthoger{
-    margin-right: 220px;
-    text-indent: 30px;
-}
+/* nästa sida */
 .tabell {
     display: grid;
-    grid-template-columns: auto auto auto auto auto;
-    grid-gap: 0px;
+    grid-template-columns: auto auto auto auto auto; /* gör en tabell för där du kan köpa biljetter och anpassas efter skärm*/
+    grid-gap: 0px; /* vill ha 0 så understrykningen år ihop och de ser ut som en linje */
     padding: 5px;
     margin-bottom: 60px;
 }
-.student {
-    text-align: center;
-    background-color:#3f5968;
-    border-radius: 30px;
-    padding: 20px;
+.student { /* gör en faktaruta  */
+    padding: 10px; /* så texten inte kommer direkjt på strecket */
+    margin-top: -30px;
+    margin-bottom: 50px; /* mer centrerad med dessa två */
+    border-style: solid; /* ram runt */
+    width: fit-content; /* anpassar sig efter skärm */
+    font-size: smaller; /* ska inte ta så mycket uppmärksamhet samtidigt som den ska det */
 }
-
-.line
+.line /* gör en linje i tabellen */
 {
-    border-bottom: 1px solid #ffff;
+    border-bottom: 1px solid white;
     text-align: center;
 }
-.kop{
-    border: 21px solid white;
+.kop /* gör en köp knapp med linje runt så det ser ut som en knapp */ {
+    border: 1px solid white;
     text-align: center;
-    text-decoration: none;
-    box-shadow: 1px 1px 1px px #c0c1c5;
-    border-radius: 20px;
-    font-weight: 600;
+    text-decoration: none; /* tar ort uunderstrykningen i ett a element */
+    box-shadow: -1px -1px 7px 1px white ; /* det lyser om knappen så man vill trycka på den och drar uppmärksamhet */
+    border-radius: 20px; /* så de liknar en knapp mer */
+    font-weight: 600; /* gör köp tjockare så det syns */
     padding: 10px; 
-    border-width: 1px 1px 1px 1px;
     margin-bottom: 10px;
+}
+/* nästa sida */
 
-}
-.anmala {
-    width: 100%;
+.anmala /* gör formuläret större så det är lättare att klicka och skriva i */{
+    width: 100%; /* raden ska gå längs hela skärmen */
     padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
+    margin: 8px 0; /* första är ifrån varandfra alltså upp ner, andra är mot vänster */
 }
-#submit {
+#submit /* gör knappen större så det är lättare att skicka formuläret */{
     padding: 10px;
 }
 
+.foter /* gör en grid för footer så det står i kolumner */{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 30px 30px;
+}
 footer {
     grid-area: footer;
-    text-align: center;
-    border-top: 1px solid white; 
-    padding: 20px;
-    margin-top: 20px;
+    border-top: 1px solid #8da3b0; /* gör en linje som skiljer footer från main */
+    padding: 10px;
+    margin-top: 80px;
+    color: #8da3b0;
 }
 
+@media all and (max-width: 750px) { /*gör en media query för skärmar med mindre skärm, 750 är bra då det då blir jobbigt att skrolla höger vänster när griden gav 1000px på main. dessutom är de bra för mobila användare*/
+   
+    .container {
+        display: grid; /* gör en grid som bas för hela hemsidan i en container */
+        grid-template-areas: 
+       "nav"
+        "header "
+        " main " 
+        "footer";
+        grid-template-rows: 30px 150px auto 140px;
+        grid-template-columns: auto; /* gör så den här kan ändras från 1000px till auto */
+    }
+    nav li {
+        margin-right: 0px; /* minskar avståndet meelan nav så de kan fortsätta vara på rad */
+    }
+    header /* ändrar storleken på rubriken så den inte tar upp så mycket plats av skärmen */{
+        font-size: 30px;
+        margin-top: 50px;
+    }
+    #poster { /* ändrar storleken på postern så den är mer anpassad till mindre skärm */
+        width: 200px;
+        margin: 50px;
+    }
+    .starttext {
+        margin: unset; /* tar bort marginalen ja la in så bilden var på sidan för att få postrern i texten istållet */
+    }
+    .recension{ 
+        margin: auto; /* tar bort förra margin så den är under rutan */
+        margin-bottom: -90px; /* drar upp trailer */
+        text-align: center; /* vi villl att de ska kolla hit och vara i mitten*/
+    }
+        /*ändrar nedräkningen så den blir mindre*/
+        .lili {
+          font-size: 0.6em;
+        }
+    
+        #headline { /* där det kommer stå att det är premiär när nedräkningen är slut */
+            font-size: 20px;
+        }
+  }

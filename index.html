@@ -7,62 +7,67 @@
     <link href="styles.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <div class="container">
+  <div class="container"> <!-- gör en container för att kunna göra grid -->
     <nav>
         <ul>
-            <li class="thispage"> <a href="index.html">START</a></li> 
+            <li class="thispage"> <a href="index.html">START</a></li>  <!-- gör en class för att ändra så att besökaren ser vilken sida den är på-->
             <li> <a href="bild.html">ROLLISTA</a> </li>
-            <li><a href="kalender.html">KALENDER</a></li>
+            <li><a href="kalender.html">BILJETTER</a></li>
             <li><a href="anmala.html">TÄVLING</a></li>
         </ul>
     </nav>
     <header>
-        <img src="bilder/THECURRRENT.png" width="800px" alt="thecurrent" id="thecurrent">
+        <h1>THE CURRENT</h1>
     </header>
     <main>
-   
 
-        <div class="container2">
-            <h1 id="headline">NEDRÄKNING TILL PREMIÄR</h1>
-            <div id="countdown">
-              <ul>
-                <li class="lili"><span id="days"></span>Dagar</li>
-                <li class="lili"><span id="hours"></span>Timmar</li>
-                <li class="lili"><span id="minutes"></span>Minuter</li>
-                <li class="lili"><span id="seconds"></span>Sekunder</li>
-              </ul>
-            </div>
-          </div>
-          <script src="script.js"></script>
-
-          <br> <br><br><br><br><br><br><br>   
-         
-        <br><br><br>
-          
-        <img src="bilder/poster2.png" alt="poster" id="poster" width="400px">
-        
-        <div class="starttext">
-          <h2>PREMIÄR 21 JUNI </h2>
-          <h3>Handling:</h3>
-        <p>Allt är inte som det verkar i Norrköping. Tre ungdomar måste välja mellan att rädda sin vänskap eller rädda Norrköping från strömmen</p>
-        <p>I denna emotionella film får vi följa tre nära vänner från Norrköping som plötsligt konfronteras med en ofattbar fara. När ett skrämmande monster dyker upp från Strömmen måste de ta ett svårt beslut - antingen rädda sin vänskap som har prövats genom åren eller ge sig ut på en riskfylld resa för att stå emot det övernaturliga hotet och skydda Norrköping.</p>
-        <p>De möter utmaningar och faror som testar gränserna för deras lojalitet och mod. Vänskapens styrka och förmåga att övervinna rädsla blir ett centralt tema när dessa unga hjältar ger sig ut på en osäker resa för att stå emot det mörka mysteriet som hotar att förtära deras hemstad.</p>
-        <p>Genom drastiska ögonblick och överraskande vändningar får tittarna uppleva en berättelsse om att våga trotsa det okända och om vikten av att hålla ihop när allt verkar förlorat. En film som blandar spänning, vänskap och övernaturliga element till en oförglömllig upplevelse med sex droger och alkohol.</p>
-    </div>
-        
-        <div id="ruta">
-            <p>Regissör: Christopher Nolan</p>
-            <p>Åldersgräns: 15 år</p>
-            <p> Utgiven: 2024</p>
-            <p>IMDB rating: 8,9 </p>
-            <p>Längd: 2 h 7 min</p>
+        <div id="countdown"> <!-- behöver göra id för javascripten och ändra utseendet-->
+          <ul>
+            <li class="lili"><span id="days"></span>Dagar</li> <!-- gör en class för dessa li då det redan finns ul li i nav  -->
+            <li class="lili"><span id="hours"></span>Timmar</li>
+            <li class="lili"><span id="minutes"></span>Minuter</li>
+            <li class="lili"><span id="seconds"></span>Sekunder</li> <!-- annars kopierad från internet-->
+          </ul>
         </div>
-        <br> <br> <br>
-        <h3>Se trailer här</h3>
-        <p>Trailern har precis som filmen själv blivit nominerat till oscars.</p>
+
+        <script src="script.js"></script>
+        <img src="bilder/poster2.png" alt="poster" id="poster"> <!-- gör id så den kan anpassa sig efter skärmstorlek -->
+
+        <div class="starttext"> <!-- gör en class för att kunna göra en ruta med information -->
+          <h2>PREMIÄR 21 JUNI </h2>
+          <ol> <!-- gör en ol lista för att göra som en snabbfakta ovanför texten-->
+            <li>Christopher Nolan</li>
+            <li>15 år</li>
+            <li>2024</li>
+            <li>IMDB: 8,9 </li>
+            <li>2 h 7 min</li>
+          </ol>
+          <p>Allt är inte som det verkar i Norrköping. Tre ungdomar måste välja mellan att rädda sin vänskap eller rädda Norrköping från strömmen</p>
+          <p>I denna emotionella film får vi följa tre nära vänner från Norrköping som plötsligt konfronteras med en ofattbar fara. När ett skrämmande monster dyker upp från Strömmen måste de ta ett svårt beslut - antingen rädda sin vänskap som har prövats genom åren eller ge sig ut på en riskfylld resa för att stå emot det övernaturliga hotet och skydda Norrköping.</p>
+          <p>De möter utmaningar och faror som testar gränserna för deras lojalitet och mod. Vänskapens styrka och förmåga att övervinna rädsla blir ett centralt tema när dessa unga hjältar ger sig ut på en osäker resa för att stå emot det mörka mysteriet som hotar att förtära deras hemstad.</p>
+          <p>Genom drastiska ögonblick och överraskande vändningar får tittarna uppleva en berättelsse om att våga trotsa det okända och om vikten av att hålla ihop när allt verkar förlorat. En film som blandar spänning, vänskap och övernaturliga element till en oförglömllig upplevelse med sex droger och alkohol.</p>
+        </div>
+
+        <div class="recension"> <!-- en class för denna för att ändra i css sedan -->
+          <p>Ett mästerverk - expressen</p>
+          <p>10/10, ett måste att se! - IMDB</p>
+          <p>Magnifik - SF studios</p>
+        </div>
+
+        <div class="trailer"> <!-- får en egen div så en bakgrund kan läggas till -->
+          <h3>Se trailer här!</h3>
+          <iframe src="https://www.youtube.com/embed/-Mizun_Ak3o?si=8ngZXthPAYP64TyJ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
     </main>
-    
-    <footer> &copy; Filmstaden AB</footer>
+    <footer> 
+        <div class="foter"> <!-- gör en div class för att kunna göra en tabell med grid -->
+          <p>Mail: thecurrent@norcopia.com</p>
+          <p>Telefon: 123 456 01</p>
+          <p> &copy; NORCOPIA PICTURES</p>
+          <p>Instagram: Thecurrent</p>
+          <p>Tiktok: Thecurrent</p>
+        </div>
+      </footer>
     </div>
 </body>
 </html>

@@ -3,47 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The current</title>
+    <title>THE CURRENT</title>
     <link href="styles.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <div class="container">
-    <nav>
-        <ul>
-            <li> <a href="index.html">START</a></li> 
-            <li> <a href="bild.html">ROLLISTA</a> </li>
-            <li><a href="kalender.html">KALENDER</a></li>
-            <li class="thispage"><a href="anmala.html">TÄVLING</a></li>
-        </ul>
-    </nav>
-    <header>
-        <h1>TÄVLA HÄR</h1>
-    </header>
-    <main>
-        <h2>ANMÄL DIG HÄR OCH TA CHANSEN ATT VINNA BILJETTER TILL GALAPREMIÄREN I STOCKHOLM!</h2>
-        <p>På Rigoletto i Stockholm kommer en galapremiär att hållas och du kan få chansen att vinna två biljetter till dig och en kompis till galan. Det kommer bjudas på mat, dryck och snacks till filmen för ett värde på 500 kronor per person. Allt du behöver göra är att anmäla dig här och motviera varför just du förtjänar att vinna, så kontaktar vi vinnaren innan 1 Juni. </p>
-
-        <form>
-            <label for="fname">Förnamn:</label><br>
-            <input type="text" id="fname" name="fname" class="anmala"><br><br>
-            <label for="lname">Efternamn:</label><br>
-            <input type="text" id="lname" name="lname" class="anmala"><br><br>
-            <label for="Mailadress">Mailadress:</label><br>
-            <input type="text" id="Mailadress" name="Mailadress" class="anmala"><br><br>
-            <label for="Telefonnummer">Telefonnummer:</label><br>
-            <input type="text" id="Telefonnummer" name="Telefonnummer" class="anmala"><br><br>
-            <label for="motviera">Motivering, varför du ska vinna?</label><br>
-            <input type="text" id="motviera" name="motviera" class="anmala"><br><br>
-          </form>
-          <form>
-            <input type="checkbox" id="villkor" name="villkor" value="villkor">
-            <label for="villkor"> Jag har läst och godkänner villkoren (obligatorisk)</label><br>
-            <br>
-            <input type="submit" value="SKICKA" id="submit">
-          </form>
-
-    </main>
-    <footer> &copy; Filmstaden AB</footer>
+    <div class="container"> <!-- gör en container för att kunna göra grid -->
+        <nav>
+            <ul>
+                <li> <a href="index.html">START</a></li> 
+                <li> <a href="bild.html">ROLLISTA</a> </li>
+                <li><a href="kalender.html">BILJETTER</a></li>
+                <li class="thispage"><a href="anmala.html">TÄVLING</a></li>  <!-- gör en class så att besökaren sedan kan se vilken sida den är på  -->
+            </ul>
+        </nav>
+        <header>
+            <h1>TÄVLA HÄR</h1>
+        </header>
+        <main>
+            <h2>ANMÄL DIG HÄR OCH TA CHANSEN ATT VINNA BILJETTER TILL GALAPREMIÄREN I STOCKHOLM!</h2>
+            <p>På Rigoletto i Stockholm kommer en galapremiär att hållas och du kan få chansen att vinna två biljetter till dig och en kompis till galan. Det kommer bjudas på mat, dryck och snacks till filmen för ett värde på 500 kronor per person. Allt du behöver göra är att anmäla dig här och motviera varför just du förtjänar att vinna, så kontaktar vi vinnaren innan 1 Juni. </p>
+            <form> <!-- gör en form så att det går att fylla i ett formulär till tävllingen -->
+                <label for="fname">Förnamn:</label><br>
+                <input type="text" id="fname" name="fname" class="anmala"><br><br>
+                <label for="lname">Efternamn:</label><br>
+                <input type="text" id="lname" name="lname" class="anmala"><br><br> <!-- classa med anmäla för att ändra sedan i css -->
+                <label for="Mailadress">Mailadress:</label><br>
+                <input type="text" id="Mailadress" name="Mailadress" class="anmala"><br><br>
+                <label for="Telefonnummer">Telefonnummer:</label><br>
+                <input type="text" id="Telefonnummer" name="Telefonnummer" class="anmala"><br><br><!-- behöver br element för att inte dem ska vara så nära varandra -->
+                <label for="motviera">Motivering, varför du ska vinna?</label><br>
+                <input type="text" id="motviera" name="motviera" class="anmala"><br><br> <!-- tog hjälp av w3 schools med allt detta -->
+            </form>
+            <form>
+                <input type="checkbox" id="villkor" name="villkor" value="villkor"> <!-- gör en checkbox för att godkänna villkor såsom gdpr -->
+                <label for="villkor"> Jag har läst och godkänner <a href="villkor.se">villkoren</a> <!-- gör en länk till potentiella villkor --> (obligatorisk)</label><br>
+                <br>
+                <input type="submit" value="SKICKA" id="submit"> <!-- gör en knapp så man kan skicka formuläret och gör id så den kan göras större -->
+            </form>
+        </main>
+        <footer>   
+            <div class="foter">
+                <p>Mail: thecurrent@norcopia.com</p>
+                <p>Telefon: 123 456 01</p>
+                <p> &copy; NORCOPIA PICTURES</p>
+                <p>Instagram: Thecurrent</p>
+                <p>Tiktok: Thecurrent</p>
+            </div>
+        </footer>
     </div>
 </body>
 </html>

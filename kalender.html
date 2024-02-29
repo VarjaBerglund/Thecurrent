@@ -3,85 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The current</title>
+    <title>THE CURRENT</title>
     <link href="styles.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <div class="container">
-    <nav>
-        <ul>
-            <li> <a href="index.html">START</a></li> 
-            <li> <a href="bild.html">ROLLISTA</a> </li>
-            <li class="thispage"><a href="kalender.html">KALENDER</a></li>
-            <li><a href="anmala.html">TÄVLING</a></li>
-        </ul>
-    </nav>
-    <header>
-        <h1>KALENDER</h1>
-    </header>
-    <main>
-        <h2>SMYGPREMIÄR 20 JUNI</h2>
-<div class="tabell">
-    <h3 class="line">BIOGRAF</h3>
-    <h3 class="line">SALONG</h3>
-    <h3 class="line">TID</h3>
-    <h3 class="line">PLATSER KVAR</h3>
-    <h3 class="line"> BILJETTER</h3>
-    <p class="line">Filmsaden Scandinavia</p>
-    <p class="line">IMAX salongen</p>
-    <p class="line">18:30</p>
-    <p class="line">255</p>
-    <a src="www.kopbiljetter.se" class="kop">KÖP</a>
-    <p class="line">Filmstaden Vällingby</p>
-    <p class="line">Salong 3</p>
-    <p class="line">19:00</p>
-    <p class="line">56</p>
-    <a src="www.kopbiljetter.se" class="kop">KÖP</a>
-    <p class="line">Filmstaden Norrköping</p>
-    <p class="line">Salong 10</p>
-    <p class="line">19:15</p>
-    <p class="line">35</p>
-    <a src="www.kopbiljetter.se" class="kop">KÖP</a>
-    <p class="line">Filmstaden Rigoletto</p>
-    <p class="line">Salong 1</p>
-    <p class="line">20:30</p>
-    <p class="line">Slutsålt</p>
-    <a src="www.kopbiljetter.se" class="kop">KÖP </a>
-</div>
-<h2>PREMIÄRDAGEN 21 JUNI</h2>
-<div class="tabell">
-    <h3 class="line">BIOGRAF</h3>
-    <h3 class="line">SALONG</h3>
-    <h3 class="line">TID</h3>
-    <h3 class="line">PLATSER KVAR</h3>
-    <h3 class="line">BILJETTER</h3>
-    <p class="line">Filmsaden Scandinavia</p>
-    <p class="line">IMAX salongen</p>
-    <p class="line">18:30</p>
-    <p class="line">Slutsålt</p>
-    <a src="www.kopbiljetter.se" class="kop">KÖP</a>
-    <p class="line">Filmstaden Vällingby</p>
-    <p class="line">Salong 3</p>
-    <p class="line">19:00</p>
-    <p class="line">5</p>
-    <a src="www.kopbiljetter.se" class="kop">KÖP</a>
-    <p class="line">Filmstaden Norrköping</p>
-    <p class="line">Salong 10</p>
-    <p class="line">19:15</p>
-    <p class="line">3</p>
-    <a src="www.kopbiljetter.se" class="kop">KÖP</a>
-    <p class="line">Filmstaden Rigoletto</p>
-    <p class="line">Salong 1</p>
-    <p class="line">20:30</p>
-    <p class="line">Slutsålt</p>
-    <a src="www.kopbiljetter.se" class="kop">KÖP</a>
-</div>
-<div class="student">
-<h3>Till alla studenter, se hit!</h3>
-<p>Använd koden "Jagälskaricaströmmen" för att få 50% rabatt på ditt biobesök. Ta med en studentkompis och få ytterligare 20 % rabatt! När du dessutom vloggar ditt besök (utan att filma bioduken) kan du vinna en signerad poster av din favorit skådespelare från filmen.</p>
-</div>
-    </main>
-    <footer> &copy; Filmstaden AB</footer>
+    <div class="container"> <!-- gör en container för att kunna göra grid -->
+        <nav>
+            <ul>
+                <li> <a href="index.html">START</a></li> 
+                <li> <a href="bild.html">ROLLISTA</a> </li>
+                <li class="thispage"><a href="kalender.html">BILJETTER</a></li>   <!-- gör en class så att besökaren sedan kan se vilken sida den är på  -->
+                <li> <a href="anmala.html">TÄVLING</a></li>
+            </ul>
+        </nav>
+        <header>
+            <h1>KÖP BILJETTER HÄR</h1>
+        </header>
+        <main>
+        
+            <h2>SMYGPREMIÄR 20 JUNI</h2>
+            <div class="tabell"> <!-- gör en div med class för en grid tabell  -->
+                <h3 class="line">BIOGRAF</h3> <!-- gör en class line för att göra understrykning under tabellen se css -->
+                <h3 class="line">SALONG</h3>
+                <h3 class="line">TID</h3>
+                <h3 class="line">PLATSER KVAR</h3>
+                <h3 class="line"> BILJETTER</h3>
+                <p class="line">Filmstaden Scandinavia</p>
+                <p class="line">IMAX salongen</p>
+                <p class="line">18:30</p>
+                <p class="line">255</p>
+                <a href="www.kopbiljetter.se" class="kop">KÖP</a> <!-- en köp knapp som skulle gå till betala biljetter, ger en class så den går att ändra-->
+                <p class="line">Filmstaden Vällingby</p>
+                <p class="line">Salong 3</p>
+                <p class="line">19:00</p>
+                <p class="line">56</p>
+                <a href="www.kopbiljetter.se" class="kop">KÖP</a>
+                <p class="line">Filmstaden Norrköping</p>
+                <p class="line">Salong 10</p>
+                <p class="line">19:15</p>
+                <p class="line">35</p>
+                <a href="www.kopbiljetter.se" class="kop">KÖP</a>
+                <p class="line">Filmstaden Rigoletto</p>
+                <p class="line">Salong 1</p>
+                <p class="line">20:30</p>
+                <p class="line">Slutsålt</p>
+                <a href="www.kopbiljetter.se" class="kop">KÖP </a>
+            </div>
+            <div class="student"> <!-- gör en div för att göra en ruta -->
+                <h3>Till alla studenter, se hit!</h3>
+                <p>Använd koden "Jagälskaricaströmmen" för att få 50% rabatt på ditt biobesök. Ta med en studentkompis och få ytterligare 20 % rabatt! När du dessutom vloggar ditt besök (utan att filma bioduken) kan du vinna en signerad poster av din favorit skådespelare från filmen.</p>
+                <p>Dessutom har vi en tävling så klicka <a href="anmala.html">HÄR</a> för att ta chansen att vinna biljetter till galapremiären.</p> <!-- länkar till tävlingssidan för att få fler gå dit  -->
+            </div>
+            <h2>PREMIÄRDAGEN 21 JUNI</h2>
+            <div class="tabell">  <!-- gör en class och en grid tabell  -->
+                <h3 class="line">BIOGRAF</h3> <!-- gör en class line för att göra understrykning -->
+                <h3 class="line">SALONG</h3>
+                <h3 class="line">TID</h3>
+                <h3 class="line">PLATSER KVAR</h3>
+                <h3 class="line">BILJETTER</h3>
+                <p class="line">Filmstaden Scandinavia</p>
+                <p class="line">IMAX salongen</p>
+                <p class="line">18:30</p>
+                <p class="line">Slutsålt</p>
+                <a href="www.kopbiljetter.se" class="kop">KÖP</a> <!-- en köp knapp som skulle gå till betala biljetter -->
+                <p class="line">Filmstaden Vällingby</p>
+                <p class="line">Salong 3</p>
+                <p class="line">19:00</p>
+                <p class="line">5</p>
+                <a href="www.kopbiljetter.se" class="kop">KÖP</a>
+                <p class="line">Filmstaden Norrköping</p>
+                <p class="line">Salong 10</p>
+                <p class="line">19:15</p>
+                <p class="line">3</p>
+                <a href="www.kopbiljetter.se" class="kop">KÖP</a>
+                <p class="line">Filmstaden Rigoletto</p>
+                <p class="line">Salong 1</p>
+                <p class="line">20:30</p>
+                <p class="line">Slutsålt</p>
+                <a href="www.kopbiljetter.se" class="kop">KÖP</a>
+            </div>
+        </main>
+        <footer>  
+            <div class="foter">
+                <p>Mail: thecurrent@norcopia.com</p>
+                <p>Telefon: 123 456 01</p>
+                <p> &copy; NORCOPIA PICTURES</p>
+                <p>Instagram: Thecurrent</p>
+                <p>Tiktok: Thecurrent</p>
+            </div>
+       </footer>
     </div>
 </body>
 </html>
