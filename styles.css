@@ -193,12 +193,13 @@ iframe { /* anpassar trailern till större storlek så den syns bättre */
     padding: 12px 20px;
     margin: 8px 0; /* första är ifrån varandfra alltså upp ner, andra är mot vänster */
     background-color: black;
-    box-shadow: 1px -1px 8px 2px white;
+    box-shadow: 0px 0px 10px 1px;
     color: white;
 }
 #submit /* gör knappen större så det är lättare att skicka formuläret */{
     padding: 10px;
 }
+
 
 .foter /* gör en grid för footer så det står i kolumner */{
     display: grid;
@@ -280,7 +281,7 @@ footer {
     margin: 15px 0; /* i mitten */
     box-shadow: 0px 0px 10px 1px; /* ser ut som den lyser */
     transform: rotateX(40deg); /* gör den mer som en fyrkant */
-    background-image: url(poster2\ ingen\ text.png); /* la till dnena för skojs skull så de ser ut som de kollar på filmen */
+    background-image: url(poster2.ingen.text.png); /* la till dnena för skojs skull så de ser ut som de kollar på filmen */
     background-size: 120px;
     background-repeat: no-repeat; /* bara en bild */
     background-position: center; /* centrerar den */
