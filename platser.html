@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE CURRENT</title>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    
+</head>
+<body class="platser"> <!-- namnger bodyn då de är så många div och känns lättare -->
+    <div class="movie-container"> <!-- delar upp så det här är listan som visar vilken färg som betyder vad -->
+        <ul class="showcase">
+            <li><div class="seat"></div> <!-- class då de finns många likadana  -->
+                <small>Stol</small>
+            </li>
+            <li><div class="seat selected"></div>
+                <small>Vald stol</small>
+            </li>
+            <li><div class="seat occupied"></div>
+                <small>Upptagen</small>
+            </li>  
+        </ul>
+    </div>
+    <div class="biograf"><!-- youtube video hjälpte med detta  -->
+        <div class="screen"></div>
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+        </div>
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+            <div class="seat occupied"></div>
+        </div>
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+        </div>
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+        </div>
+    </div>
+    <p id="plats">Du har valt <span id="count">0</span> sittplatser</p>
+    <script src="script.js"></script>
+    <a href="kalender.html" class="kop"> KÖP</a><!-- en knapp att köpa -->
+    <a href="kalender.html">Tillbaka</a><!-- en knapp så man kan gå tillbaka -->
+</body>
+
+</html>

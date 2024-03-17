@@ -12,7 +12,7 @@
           const now = new Date().getTime(),
                 distance = countDown - now;
   
-          document.getElementById("days").innerText = Math.floor(distance / (day)),
+            document.getElementById("days").innerText = Math.floor(distance / (day)),
             document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
             document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
             document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
@@ -24,3 +24,24 @@
           }
         }, 0)
 }());
+       
+
+const container = document.querySelector('.biograf')
+const seats = document.querySelectorAll('.row .seat:not(.occupied)')
+const count = document.getElementById('count')
+const total = document.getElementById('total')
+const movieSelect = document.getElementById('movie')
+
+function updateSelectedCount() {
+  const selectedSeats = document.querySelectorAll('.row .seat.selected')
+  const selectedSeatsCount = selectedSeats.length;
+  count.innerText = selectedSeatsCount;
+}
+ 
+ container.addEventListener('click', (e) => {
+  if (e.target.classList.contains('seat') && !e.target.classList.contains('occupied')) {
+    e.target.classList.toggle('selected')
+  }
+    updateSelectedCount();
+ 
+});

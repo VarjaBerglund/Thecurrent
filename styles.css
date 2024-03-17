@@ -4,23 +4,22 @@ body {
     background-color: #191a19;
     margin: 0;
     padding: 0;
-   font-family: Arial, Helvetica, sans-serif;
+   font-family: Arial, Helvetica, sans-serif; /* sätter standard font */
    line-height: 25px; /* sätter standard för radavstånd */
 }
-
 header {
     grid-area: header;
     font-size: 50px;
     text-align: center;/* vill ha headern stor och centrerad så den syns tydligt */
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-shadow: #8da3b0 2px 2px 2px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* sätter standard font för alla */
+    text-shadow: #8da3b0 2px 2px 5px ; /* lite mystik över texten så den poppar */
     margin-top: 30px;
 }
 main {
     grid-area: main;
 }
 h2 {
-    font-weight:bold; /* vi har underrubriker i bold då de är vår grafiska profil då de syns bättre då och skiljer sig från texten */
+    font-weight:bold; /* vi har underrubriker i bold då de följer vår grafiska profil då de syns bättre och skiljer sig från texten */
 }
 .container {
     display: grid; /* gör en grid som bas för hela hemsidan i en container */
@@ -29,9 +28,8 @@ h2 {
     "header header header"
     ". main ." /* gör punkt så att det är tomt på sidan och får centrerad och anpassningsbar design */
     "footer footer footer";
-    grid-template-rows: 50px 200px auto 170px;/* gör main autoså den anpasssar sig efter innehåll */
+    grid-template-rows: 50px 200px auto 250px;/* gör main auto så den anpasssar sig efter innehåll */
     grid-template-columns: auto 1000px auto; /* sätter punkterna till auto så de anpassar sig efter skärmens storlek men har main som en bestämd så designen ser likadan ut*/
-
 }
 nav {
     grid-area: nav; /* namnger till grid */
@@ -40,7 +38,6 @@ nav {
     position: fixed; /*gör så att nav stannar även om man skrollar ner men är också alltid fast där */
     text-shadow: 2px 1px 2px black;/* gillar lite mystisk känsla med shadow */
     width: 100%; /* nav är över hela skärmen så den lätt ska synas och hittas */
-    
 }
 ul {
     list-style: none; /* tar bort nav listans prickar */
@@ -70,7 +67,7 @@ a {
     background-color: #8da3b0; /* gör så att hemsidan du är inne på har en annan färg */
 }
 
-#countdown /* nedräkningen */ {
+#countdown /* nedräkningen som är inspirerad av internet*/ {
     color: #8da3b0;
     text-align: center;
     float: right; /*  gör så att nederäkningen kan vara bredvid bilden */
@@ -78,7 +75,6 @@ a {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 1.5em;
     text-shadow: black 3px 3px 5px; /* första åt sidan, ner och sista är runt hela, kan skriva minus för o byta upp och ner*/
-
   }
   .lili /* för exakt li i nedräkningen */ {
     display: inline-block; /* för att få de på rad efter varann */
@@ -117,7 +113,7 @@ ol li {
 }
 .recension { 
     margin-top: -180px; /* så texten hamnar under poster men innan rutan är slut annars är det ett hål där */
-    font-style: italic;
+    font-style: italic; 
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: larger; /* så de blir lättare att läsa */
 }
@@ -135,21 +131,30 @@ iframe { /* anpassar trailern till större storlek så den syns bättre */
     height: 315px;
     border: none; /* detta sa ai att jag skulle göra när jag kopiera fel meddelande vid validering */
 }
+
 /* nästa sida */
-.rollista 
-{
+
+.rollista {
     display: grid;/* gör en tabell för att skriva i olika kolumner */
-    grid-template-columns: auto auto auto;
-    text-align:left;
+    grid-template-columns: 32% 32% 32%; /* då de är padding med och gap och så  */
+    text-align:justify;
     border-style: solid;
     border-color: white;
     border-radius: 40px; /* lite mjukare känsla med mjuka former */
     padding: 30px;
-    grid-gap: 15px; /* särar på griden lite */
+    grid-gap: 20px; /* särar på griden lite */
     box-shadow: 1px -1px 10px 1px; /* första är sidan, andra är upp eller ner, genomskinlighet ish och sista hur stort runt går shadow*/
+}
+.tavling { /* ändrar så att skärmens bredd är mindre och därmed tecken per rad mindre */
+    margin-right: 210px; 
+    margin-left: 210px;
+}
+.rollbild {
+    width: 100%; /* gör så bilderna är lika stora som kolumnen */
 }
 
 /* nästa sida */
+
 .tabell {
     display: grid;
     grid-template-columns: auto auto auto auto auto; /* gör en tabell för där du kan köpa biljetter och anpassas efter skärm*/
@@ -158,34 +163,38 @@ iframe { /* anpassar trailern till större storlek så den syns bättre */
     margin-bottom: 60px;
 }
 .student { /* gör en faktaruta  */
-    padding: 10px; /* så texten inte kommer direkjt på strecket */
-    margin-top: -30px;
+    padding: 10px; /* så texten inte kommer direkt på strecket */
+    margin-top: -40px;
     margin-bottom: 50px; /* mer centrerad med dessa två */
     border-style: solid; /* ram runt */
-    width: fit-content; /* anpassar sig efter skärm */
-    font-size: smaller; /* ska inte ta så mycket uppmärksamhet samtidigt som den ska det */
+    margin-left: 210px;
+    margin-right: 210px;/* gör dessa två så texten får mindre tecken per rad */
+    line-height: 20px;
 }
-.line /* gör en linje i tabellen */
-{
+.line /* gör linjer i tabellen */{
     border-bottom: 1px solid white;
     text-align: center;
 }
 .kop /* gör en köp knapp med linje runt så det ser ut som en knapp */ {
     border: 1px solid white;
     text-align: center;
-    text-decoration: none; /* tar ort uunderstrykningen i ett a element */
+    text-decoration: none; /* tar bort uunderstrykningen i ett a element */
     box-shadow: -1px -1px 7px 1px white ; /* det lyser om knappen så man vill trycka på den och drar uppmärksamhet */
     border-radius: 20px; /* så de liknar en knapp mer */
     font-weight: 600; /* gör köp tjockare så det syns */
     padding: 10px; 
     margin-bottom: 10px;
 }
+
 /* nästa sida */
 
 .anmala /* gör formuläret större så det är lättare att klicka och skriva i */{
     width: 100%; /* raden ska gå längs hela skärmen */
     padding: 12px 20px;
     margin: 8px 0; /* första är ifrån varandfra alltså upp ner, andra är mot vänster */
+    background-color: black;
+    box-shadow: 1px -1px 8px 2px white;
+    color: white;
 }
 #submit /* gör knappen större så det är lättare att skicka formuläret */{
     padding: 10px;
@@ -193,16 +202,94 @@ iframe { /* anpassar trailern till större storlek så den syns bättre */
 
 .foter /* gör en grid för footer så det står i kolumner */{
     display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: 30px 30px;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 50px 40px;
 }
+
 footer {
     grid-area: footer;
     border-top: 1px solid #8da3b0; /* gör en linje som skiljer footer från main */
-    padding: 10px;
+    padding: 20px;
     margin-top: 80px;
     color: #8da3b0;
 }
+
+
+
+/* här är för platsbokningen som vi utgått från en youtube video som heter "Build a Movie Seat Booking App using JavaScript - JavaScript Beginner Projects" */
+.platser{
+    box-sizing: border-box;
+    display: flex; /* gör en flexbok */
+    flex-direction: column; /* berättar vilket håll allt ska vara */
+    align-items: center;
+    justify-content: center;/* centrerar allt */
+}
+
+.seat { /* gör stolarna  */
+    background-color: #8da3b0;
+    height: 12px;
+    width: 15px;
+    margin: 4px;
+    border-top-left-radius:10px;/* gör dem rundade i hörnen */
+    border-top-right-radius:10px;
+}
+.row {
+    display: flex; /* gör så raderna är som de är */
+}
+
+.movie-container{ 
+    margin: 20px 0; /* drar ner allt lite */
+}
+
+.seat.selected {
+    background-color: aqua; /* färg för när stolen är vald */
+}
+
+.seat.occupied {
+    background-color: red; /* färg för när stolen är såld */
+}
+
+.seat:not(.occupied):hover { /* gör så att när musen är över blir den större så man fattar att de är en knapp */
+    cursor: pointer;
+    transform: scale(1.2);
+}
+/* gör att den stolen som visar hur den ser ut när den är vald inte blir så när musen är över då de inte är en knapp */
+.showcase .seat:not(.occupied):hover {
+    cursor: default;
+    transform: scale(1);
+}
+
+.showcase { /* delen där de visas hur de vad de olika färgerna på stolarna betyder */
+    background-color: #3f5968;
+    display: flex;
+    flex-direction: row; /* berättar vilket håll de ska gå */
+    padding: 5px 10px;
+    border-radius: 5px; /* mjuka runda kanter */
+    color: #8da3b0;
+}
+.showcase li { /* ger space mellan dem, allt centrerat osv */
+    display: flex; /* så de hamnar på samma rad allt */
+    align-items: center;
+    justify-content: center;
+    margin: 0 18px; 
+}
+
+.screen {/* gör bioduken */
+    height: 100px;
+    width: 100%;
+    margin: 15px 0; /* i mitten */
+    box-shadow: 0px 0px 10px 1px; /* ser ut som den lyser */
+    transform: rotateX(40deg); /* gör den mer som en fyrkant */
+    background-image: url(poster2\ ingen\ text.png); /* la till dnena för skojs skull så de ser ut som de kollar på filmen */
+    background-size: 120px;
+    background-repeat: no-repeat; /* bara en bild */
+    background-position: center; /* centrerar den */
+}
+
+p#plats span {
+    color: aqua; /* färg för antal sittplatser i siffran */
+}
+
 
 @media all and (max-width: 750px) { /*gör en media query för skärmar med mindre skärm, 750 är bra då det då blir jobbigt att skrolla höger vänster när griden gav 1000px på main. dessutom är de bra för mobila användare*/
    
@@ -242,4 +329,11 @@ footer {
           font-size: 0.6em;
         }
     
+    .tavling{
+    margin: 0px; /* ändrar denna då den inte behöver margin vid mindre skärm utan de va ba för att få mindre antal tecken per rad */
+    }
+    .student {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
   }
